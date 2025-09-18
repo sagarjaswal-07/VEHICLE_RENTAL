@@ -86,8 +86,8 @@ app.post("/api/create-checkout-session", verifyToken, async (req, res) => {
       payment_method_types: ["card"],
       line_items: line_items,
       mode: "payment",
-      success_url: process.env.SUCCESS_URL,
-      cancel_url: process.env.FAILURE_URL,
+      success_url: "https://vehicle-rental-u8ls.onrender.com/success",
+      cancel_url: "https://vehicle-rental-u8ls.onrender.com/paymentfailed",
       metadata: { vehicleId, totalPrice, days, startDate, endDate },
     });
 
@@ -127,8 +127,8 @@ app.post("/api/pay-penalty", async (req, res) => {
       ],
       mode: "payment",
       // Redirect with penaltyId in query params
-      success_url: process.env.PENALTY_SUCCESS_URL,
-      cancel_url: process.env.PENALTY_FAILURE_URL,
+      success_url: "https://vehicle-rental-u8ls.onrender.com/penaltypaysuccess",
+      cancel_url: "https://vehicle-rental-u8ls.onrender.com/penaltypayfailed",
       metadata: { penaltyId },
     });
 

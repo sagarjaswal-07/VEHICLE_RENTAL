@@ -114,7 +114,7 @@
 
     const makePayment = async (bookingDetails) => {
       const stripe = await loadStripe(
-        import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY
+        "pk_test_51RNq0wCB4xh1h4fy237mYGljkklscwl7ajcGsPJD0gY91XVwm7GGWp3HtKlFxk6D1zARH8TTXS2UaLqUQUyRDBEg00bOFsKVfp"
       );
 
       try {
@@ -127,7 +127,7 @@
 
 
         const response = await fetch(
-          import.meta.env.VITE_API_BASE_URL+"create-checkout-session",
+          "https://vehicle-rental-u8ls.onrender.com/api/"+"create-checkout-session",
           {
             method: "POST",
             headers: {

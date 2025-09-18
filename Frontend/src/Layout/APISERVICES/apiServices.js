@@ -1,8 +1,8 @@
 import axios from "axios";
 import * as qs from "qs";
 
-const BASE_URL = import.meta.env.VITE_API_BASE_URL;
-export const BASE_IMAGE_URL = import.meta.env.VITE_BASE_IMAGE_URL;
+const BASE_URL = "https://vehicle-rental-u8ls.onrender.com/api/";
+export const BASE_IMAGE_URL = "https://vehicle-rental-u8ls.onrender.com";
 
 class apiServices {
   //fetching token
