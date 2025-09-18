@@ -86,8 +86,8 @@ app.post("/api/create-checkout-session", verifyToken, async (req, res) => {
       payment_method_types: ["card"],
       line_items: line_items,
       mode: "payment",
-      success_url:"http://localhost:5173/success",
-      cancel_url: "http://localhost:5173/paymentfailed",
+      success_url: process.env.SUCCESS_URL,
+      cancel_url: process.env.FAILURE_URL,
       metadata: { vehicleId, totalPrice, days, startDate, endDate },
     });
 
@@ -127,8 +127,8 @@ app.post("/api/pay-penalty", async (req, res) => {
       ],
       mode: "payment",
       // Redirect with penaltyId in query params
-      success_url: "http://localhost:5173/penaltypaysuccess",
-      cancel_url: "http://localhost:5173/penaltypayfailed",
+      success_url: process.env.PENALTY_SUCCESS_URL,
+      cancel_url: process.env.PENALTY_FAILURE_URL,
       metadata: { penaltyId },
     });
 

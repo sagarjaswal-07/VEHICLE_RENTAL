@@ -37,7 +37,7 @@ export default function SeePenalties() {
       );
 
       const response = await fetch(
-        "http://localhost:3009/api/" + "pay-penalty",
+        import.meta.env.VITE_API_BASE_URL + "pay-penalty",
         {
           method: "POST",
           headers: {

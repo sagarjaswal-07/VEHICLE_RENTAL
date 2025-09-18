@@ -127,7 +127,7 @@
 
 
         const response = await fetch(
-          "http://localhost:3009/api/"+"create-checkout-session",
+          import.meta.env.VITE_API_BASE_URL+"create-checkout-session",
           {
             method: "POST",
             headers: {

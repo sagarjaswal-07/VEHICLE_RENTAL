@@ -1,8 +1,8 @@
 import axios from "axios";
 import * as qs from "qs";
 
-const BASE_URL = "http://localhost:3009/api/";
-export const BASE_IMAGE_URL = "http://localhost:3009/";
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
+export const BASE_IMAGE_URL = import.meta.env.VITE_BASE_IMAGE_URL;
 
 class apiServices {
   //fetching token
