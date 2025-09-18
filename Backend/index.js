@@ -26,9 +26,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api", route);
 app.use(express.static(__dirname + "/public/"));
 
-app.use(express.static(path.join(_dirname,"/frontend/dist")))
+app.use(express.static(path.join(_dirname,"/Frontend/dist")))
 app.get("*",(_,res)=>{
-  res.sendFile(path.resolve(_dirname,"frontend","dist","index.html"))
+  res.sendFile(path.resolve(_dirname,"Frontend","dist","index.html"))
 })
 
 // Run admin seeder
